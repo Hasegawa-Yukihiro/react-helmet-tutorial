@@ -2,8 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 //  aliasの読み込み
-const { Alias } = require("../config/scripts/alias.js");
-const alias = new Alias();
+const { alias } = require("../config/scripts/alias.js");
 
 module.exports = {
   /** entry point */
@@ -12,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "bundle.js",
-    publicPath: "/"
+    publicPath: "./"
   },
   /** https://qiita.com/YoshinoriKanno/items/322ae6e53daa35059c15 */
   devtool: "eval-source-map",
