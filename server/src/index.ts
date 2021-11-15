@@ -1,6 +1,6 @@
 import express from "express";
 import rootDir from "app-root-path";
-import { intervalRequest } from "../modules/intervalRequest";
+// import { intervalRequest } from "../modules/intervalRequest";
 const app = express();
 
 app.use(express.static(rootDir + "/client/dist"));
