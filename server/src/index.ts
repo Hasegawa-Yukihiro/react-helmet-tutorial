@@ -8,4 +8,4 @@ app.use(express.static(rootDir + "/client/dist"));
 const port = process.env.PORT || 3000;
 app.listen(port);
 
-intervalRequest();
+// intervalRequest();
