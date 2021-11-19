@@ -8,7 +8,9 @@ app.use(express.static(rootDir + "/client/dist"));
 const htmlFilePathname = rootDir + "/client/dist/index.html";
 let htmlFile = fs.readFileSync(htmlFilePathname, { encoding: "utf-8" });
 
-app.get(/^(?!.*api).+$/, (req, res) => res.status(200).send(htmlFile));
+app.get(/^(?!.*api).+$/, (req, res) => {
+  res.status(200).send(htmlFile);
+});
 const port = process.env.PORT || 3000;
 app.listen(port);
 
